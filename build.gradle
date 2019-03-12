@@ -19,30 +19,31 @@ allprojects {
 archivesBaseName = ''
 group = "com.venusource.app.qywechat"
 version = "0.1"
-
-modifyPom {
-    project {
-        name 'qywechat-tools'
-        description 'qywechat-tools for java developer.'
-        url 'https://github.com/ChangjunZhao/qywechat-tools'
-        inceptionYear '2019'
-        scm {
-            url 'https://github.com/ChangjunZhao/qywechat-tools'
-            connection 'git@github.com:ChangjunZhao/qywechat-tools.git'
-            developerConnection 'https://github.com/ChangjunZhao'
-        }
-        licenses {
-            license {
-                name 'MIT License'
-                url 'https://opensource.org/licenses/MIT'
-                distribution 'repo'
+configurations{
+    modifyPom {
+        project {
+            name 'qywechat-tools'
+            description 'qywechat-tools for java developer.'
+            url 'https://github.com/venusource/qywechat-tools'
+            inceptionYear '2019'
+            scm {
+                url 'https://github.com/venusource/qywechat-tools'
+                connection 'git@github.com:venusource/qywechat-tools.git'
+                developerConnection 'https://github.com/venusource'
             }
-        }
-        developers {
-            developer {
-                id 'ChangjunZhao'
-                name 'ChangjunZhao'
-                email 'zhaochj@126.com'
+            licenses {
+                license {
+                    name 'MIT License'
+                    url 'https://opensource.org/licenses/MIT'
+                    distribution 'repo'
+                }
+            }
+            developers {
+                developer {
+                    id 'ChangjunZhao'
+                    name 'ChangjunZhao'
+                    email 'zhaochj@126.com'
+                }
             }
         }
     }
