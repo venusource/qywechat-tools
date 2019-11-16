@@ -18,4 +18,31 @@
 ```
 implementation 'com.venusource.app.qywechat:qywechat-sdk:3.2.0'
 ```
+## example
 
+### 基本使用
+
+[qywechat-demo](https://github.com/venusource/qywechat-tools/tree/master/qywechat-demo)
+
+### SpringBoot
+
+Spring boot用户可以参考下面的例子，或者以此模板直接开发：
+
+[wxworksdkdemo](https://github.com/venusource/qywechat-tools/tree/master/wxworksdkdemo)
+
+使用前，请更改`application.yaml`文件中的相关配置，如下所示：
+```
+wechat:
+  cp:
+    corpId: your_corpid
+    wxworkServer: your_local_wxwork_server
+    appConfigs:
+      - agentId: your_agentid
+        secret: your_secret
+        token: your_token
+        aesKey: your_aesKey
+      - agentId: your_agentid_2
+        secret: your_secret
+        token: your_token
+        aesKey: your_aesKey
+```

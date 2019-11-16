@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: wxworksdkdemo
+spec:
+  ports:
+  - port: 80
+    name: http
+    nodePort: 30407
+    targetPort: 8080
+    protocol: TCP
+  type: NodePort
+  selector:
+    app: wxworksdkdemo
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wxworksdkdemo
+spec:
+  selector:
+    matchLabels:
+      app: wxworksdkdemo
+  template:
+    metadata:
+      labels:
+        app: wxworksdkdemo
+    spec:
+      containers:
+      - name: wxworksdkdemo
+        image: kube.gwunion.cn/cj/wxworksdkdemo
+        ports:
+          - containerPort: 8080

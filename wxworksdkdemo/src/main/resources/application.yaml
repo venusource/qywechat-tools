@@ -1,0 +1,19 @@
+logging:
+  level:
+    org.springframework.web: INFO
+    com.qq.weixin.work.demo.wxworksdkdemo: DEBUG
+wechat:
+  cp:
+    corpId: your_corpid
+    wxworkServer: your_local_wxwork_server
+    appConfigs:
+      - agentId: your_agentid
+        secret: your_secret
+        token: your_token
+        aesKey: your_aesKey
+      - agentId: your_agentid_2
+        secret: your_secret
+        token: your_token
+        aesKey: your_aesKey
+server:
+  port: 8080
